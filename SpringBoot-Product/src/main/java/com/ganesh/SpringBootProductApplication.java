@@ -131,7 +131,7 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		
 		//7
 		
-		
+		System.err.println(PR.existsById(30));
 		
 		
 		
