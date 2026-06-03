@@ -124,7 +124,14 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		
 		//6
 		
-		PR.findAll().forEach(i->System.err.println(i));
+//		PR.findAll().forEach(i->System.err.println(i));
+		
+		
+		
+		
+		//7
+		
+		
 		
 		
 		
