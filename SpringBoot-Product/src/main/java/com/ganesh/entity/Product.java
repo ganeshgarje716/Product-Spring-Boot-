@@ -33,7 +33,7 @@ public class Product {
 	
 	
 	
-	public Product(Integer id, String name, String type, Integer qty, Double price, Boolean active) {
+	public Product(String name, String type, Integer qty, Double price, Boolean active) {
 		super();
 		this.id = id;
 		this.name = name;
