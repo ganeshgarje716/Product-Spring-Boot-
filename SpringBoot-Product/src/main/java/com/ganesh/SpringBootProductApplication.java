@@ -1,5 +1,6 @@
 package com.ganesh;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,7 +106,29 @@ public class SpringBootProductApplication implements CommandLineRunner{
 			
 			//3
 			
-			System.out.println(PR.count());
+//			System.out.println(PR.count());
+		
+		
+		
+		//4
+		
+//		System.err.println(PR.findById(60).get());
+		
+		
+		
+		//5
+		
+//		PR.findAllById(Arrays.asList(27,30,40,50,60,70,54)).forEach(i->System.err.println(i));
+		
+		
+		
+		//6
+		
+		PR.findAll().forEach(i->System.err.println(i));
+		
+		
+		
+		
 		
 		
 		
