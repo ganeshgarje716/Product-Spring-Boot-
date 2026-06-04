@@ -155,7 +155,14 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		
 		//10
 		
-		PR.deleteAllById(Arrays.asList(30,45,55,53));
+//		PR.deleteAllById(Arrays.asList(30,45,55,53));
+		
+		
+		
+		
+		//11
+		
+//		PR.deleteAll();
 		
 		
 		
