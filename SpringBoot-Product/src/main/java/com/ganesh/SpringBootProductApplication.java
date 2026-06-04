@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
@@ -177,9 +178,20 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		
 		//13 Pagination
 		
-		int page=4;
+//		int page=4;
+//		
+//		PR.findAll(PageRequest.of(page - 1, 10)).getContent().forEach(i->System.err.println(i));
 		
-		PR.findAll(PageRequest.of(page - 1, 10)).getContent().forEach(i->System.err.println(i));
+		
+		
+//		14 Filtration
+		
+		Product p=new Product();
+		
+		p.setType("LG");
+		p.setActive(true);
+		
+		PR.findAll(Example.of(p)).forEach(i->System.err.println(i));
 		
 		
 		
