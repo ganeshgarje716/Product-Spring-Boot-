@@ -137,12 +137,19 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		
 		//8
 		
-      Product p = PR.findById(1).get();
-
-		p.setType("HP");
-		p.setPrice(80000.00);
-
-		PR.save(p);
+//        Product p = PR.findById(1).get();
+//
+//		p.setType("HP");
+//		p.setPrice(80000.00);
+//
+//		PR.save(p);
+		
+		
+		
+		
+		//9
+		
+		PR.deleteById(61);
 		
 		
 		
