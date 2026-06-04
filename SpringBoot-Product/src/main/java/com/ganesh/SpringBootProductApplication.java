@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
 import com.ganesh.entity.Product;
@@ -169,7 +170,19 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		
 		//12 Sorting
 		
-		PR.findAll(Sort.by("id").ascending()).forEach(i->System.err.println(i));
+//		PR.findAll(Sort.by("id").ascending()).forEach(i->System.err.println(i));
+		
+		
+		
+		
+		//13 Pagination
+		
+		int page=4;
+		
+		PR.findAll(PageRequest.of(page - 1, 10)).getContent().forEach(i->System.err.println(i));
+		
+		
+		
 		
 		
 		
