@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.Sort;
 
 import com.ganesh.entity.Product;
 import com.ganesh.repository.ProductRepository;
@@ -163,6 +164,14 @@ public class SpringBootProductApplication implements CommandLineRunner{
 		//11
 		
 //		PR.deleteAll();
+		
+		
+		
+		//12 Sorting
+		
+		PR.findAll(Sort.by("id").ascending()).forEach(i->System.err.println(i));
+		
+		
 		
 		
 		
